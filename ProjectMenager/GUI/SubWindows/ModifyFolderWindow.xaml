@@ -1,0 +1,103 @@
+﻿<Window x:Class="GUI.SubWindows.ModifyFolderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI.SubWindows"
+        mc:Ignorable="d"
+        Title="Modify folders"
+        Height="300" Width="467"
+        ResizeMode="NoResize"
+        FontSize="16" Background="#FFFDFDFD"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto" />
+            <!--kolumna na labele-->
+            <ColumnDefinition Width="auto" />
+            <!--kolumna na textBoxy-->
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <!--wiersz na Nazwę-->
+            <RowDefinition Height="auto"/>
+            <!--kolumna na opis-->
+            <RowDefinition Height="auto"/>
+            <!--wiersz na tagi-->
+            <RowDefinition Height="auto"/>
+            <!--wiersz na przysiki-->
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1"
+               Content="Nazwa"
+               VerticalAlignment="Center"
+               Width="auto"
+               Margin="0,0,0,10"/>
+        <TextBox x:Name="textBoxName"
+                 Grid.Row="1" Grid.Column="2"
+                 MinWidth="300" MinHeight="40"
+                 Margin="0,0,0,10"/>
+        <Label Grid.Row="2" Grid.Column="1"
+               Content="Opis"
+               VerticalAlignment="Center"
+               Width="auto"
+               Margin="0,0,0,10"
+               />
+        <TextBox x:Name="textBoxDescription"
+                 Grid.Row="2" Grid.Column="2"
+                 MinWidth="300" Width="auto" 
+                 MinHeight="60" Height="auto"
+                 Padding="0,10"
+                 Margin="0,0,0,10"
+                 />
+        <Label Grid.Row="3" Grid.Column="1"
+               Content="Tagi"
+               VerticalAlignment="Center"
+               Width="auto"
+               />
+        <TextBox x:Name="textBoxTags"
+                 Grid.Row="3" Grid.Column="2"
+                 MinWidth="300" Width="auto" 
+                 MinHeight="60" Height="auto"
+                 Padding="0,10"
+                 />
+
+        <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+              Margin="0, 10, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="buttonOK"
+                    Click="buttonOK_Click"
+                    IsDefault="True" IsCancel="False"
+                    Grid.Row="0" Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="OK"
+                    MinWidth="200" MinHeight="40"
+                    Width="auto"
+                    Margin="0,0,10,0"
+                    />
+            <Button x:Name="buttonCancel"
+                    Click="buttonCancel_Click"
+                    IsCancel="True"
+                    Grid.Row="0" Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="Cancel"
+                    MinWidth="200" MinHeight="40"
+                    Width="auto"
+                    Margin="10,0,0,0"
+                    />
+        </Grid>
+    </Grid>
+</Window>

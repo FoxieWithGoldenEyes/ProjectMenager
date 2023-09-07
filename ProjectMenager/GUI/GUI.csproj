@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>WinExe</OutputType>
+	<TargetFramework>net6.0-windows</TargetFramework>
+	<Nullable>enable</Nullable>
+	<UseWPF>true</UseWPF>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\APIsDll\APIsDll.csproj" />
+	<ProjectReference Include="..\AppDll\AppDll.csproj" />
+  </ItemGroup>
+
+	<!-- <ApplicationIcon>icon.ico</ApplicationIcon> -->
+
+	<ItemGroup>
+	<Folder Include="Fonts\Ubuntu\" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <None Update="app.manifest">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="icon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<ApplicationIcon>icon.ico</ApplicationIcon>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
+
+</Project>
